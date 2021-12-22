@@ -1,1 +1,92 @@
-/** CSS STYLE **/
+/** Общие стили **/
+@font-face {
+  font-weight: normal;
+  font-family: 'Neucha';
+  font-style: normal;
+  src: url(../fonts/Neucha-Regular.ttf);
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: 'OpenSans';
+  font-style: normal;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  width: 100vw; /** проверить впоследствии - а стоит ли оставлять этот класс **/
+  margin: 0;
+  padding: 0;
+
+  color: #2a2626;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: OpenSans, sans-serif;
+  font-style: normal;
+  line-height: 1.6em;
+}
+
+/** Секции **/
+.section {
+  width: 1110px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  text-align: center;
+}
+
+/** Заголовки **/
+.heading {
+  font-family: Neucha, sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+/** Цвета **/
+.color_white {
+  color: #fff;
+}
+
+.color_translucent-white {
+  color: #d7ccc0;
+}
+
+.color_light {
+  color: #f5f4f0;
+}
+
+.color_basic {
+  color: #fe8a02;
+}
+
+.color_basic-dark {
+  color: #42413c;
+}
+
+.color_dark {
+  color: #2a2626;
+}
+
+.color_translucent-dark {
+  color: #908d8b;
+}
+
+.color_brown {
+  color: #b09a81;
+}
+
+.color_blue {
+  color: #1085c5;
+}
