@@ -15,7 +15,7 @@
 
 * {
   box-sizing: border-box;
-  width: 100vw; /** проверить впоследствии - а стоит ли оставлять этот класс **/
+  width: 100vw;
   margin: 0;
   padding: 0;
 
@@ -27,23 +27,117 @@
   line-height: 1.6em;
 }
 
+.fx {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fx-col {
+  /** надо ли **/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/** Вспомогательные - удалить в конце проекта **/
+.box-red {
+  width: 50px;
+
+  background-color: red;
+}
+
+.box-green {
+  width: 50px;
+
+  background-color: green;
+}
+
 /** Секции **/
+
 .section {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -30;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -30;
+
+  display: block;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 10%;
+
+  content: url(../img/background.png);
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: -10;
+
   width: 1110px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  height: 714px;
+  margin: 100px -555px;
+
+  overflow: hidden;
 
   text-align: center;
+
+  /** border: 1px solid green; /** удалить в конце **/
+}
+
+.half-container {
+  width: 540px;
+  min-height: 200px;
+
+  text-align: left;
+
+  /** border: 1px solid red; /** удалить в конце **/
+}
+
+.heading-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  width: 100%;
+  margin-bottom: 20px;
+
+  /** border: 1px solid blue; /** удалить в конце **/
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 /** Заголовки **/
 .heading {
+  width: 100%;
+
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
 }
 
 h1 {
   font-size: 72px;
+  text-align: left;
 }
 
 h2 {
@@ -54,39 +148,93 @@ h3 {
   font-size: 34px;
 }
 
+p {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 /** Цвета **/
-.color_white {
+.color-white {
   color: #fff;
 }
 
-.color_translucent-white {
+.color-translucent-white {
   color: #d7ccc0;
 }
 
-.color_light {
+.color-light {
   color: #f5f4f0;
 }
 
-.color_basic {
+.color-basic {
   color: #fe8a02;
 }
 
-.color_basic-dark {
+.color-basic-dark {
   color: #42413c;
 }
 
-.color_dark {
+.color-dark {
   color: #2a2626;
 }
 
-.color_translucent-dark {
+.color-translucent-dark {
   color: #908d8b;
 }
 
-.color_brown {
+.color-brown {
   color: #b09a81;
 }
 
-.color_blue {
+.color-blue {
   color: #1085c5;
+}
+
+/** Шапка **/
+
+.logo {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  z-index: -20;
+
+  height: 525px;
+}
+
+.btn-link {
+  width: 148px;
+  margin-top: 40px;
+  margin-left: 0;
+  padding: 12px 24px;
+
+  background-color: #fe8a02;
+}
+
+.btn-link a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.margin-185 {
+  margin-bottom: 185px;
+}
+
+/** Когнитивные искажения **/
+
+.video {
+  width: 919px;
+
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.gag {
+  position: relative;
+  top: -100px;
+  left: 0;
+  z-index: -30;
+
+  width: 100vw;
+  height: 100px;
+
+  background: #42413c;
 }
