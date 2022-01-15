@@ -10,12 +10,18 @@
   font-weight: normal;
   font-family: 'OpenSans';
   font-style: normal;
-  src: url(../fonts/OpenSans-Regular.ttf);
+  src: url(../fonts/static/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'OpenSans';
+  font-style: bold;
+  src: url(../fonts/static/OpenSans/OpenSans-Bold.ttf);
 }
 
 * {
   box-sizing: border-box;
-  width: 100vw;
   margin: 0;
   padding: 0;
 
@@ -30,50 +36,57 @@
 .fx {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
 
-.fx-col {
-  /** надо ли **/
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/** Вспомогательные - удалить в конце проекта **/
-.box-red {
-  width: 50px;
-
-  background-color: red;
-}
-
-.box-green {
-  width: 50px;
-
-  background-color: green;
-}
-
-/** Секции **/
-
+/** Злодолбучие секции **/
 .section {
   position: relative;
-  top: 0;
-  left: 0;
-  z-index: -30;
 
   width: 100%;
   overflow: hidden;
 }
 
-.section::before {
+.background-basic {
+  background: none;
+}
+
+.background-basic::before {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -30;
+  z-index: -10;
+
+  display: block;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 10%;
+
+  content: url(../img/background.png);
+}
+
+.background-white {
+  text-align: center;
+
+  background: #fff;
+}
+
+.background-dark {
+  background: #42413c;
+}
+
+.background-light {
+  background: #b09a81;
+}
+
+.background-light::after {
+  position: absolute;
+  top: 0;
+  left: 0;
 
   display: block;
   width: 100%;
@@ -87,69 +100,56 @@
 
 .container {
   position: relative;
-  top: 50%;
-  left: 50%;
-  z-index: -10;
+  z-index: 10;
 
   width: 1110px;
-  height: 714px;
-  margin: 100px -555px;
 
-  overflow: hidden;
-
-  text-align: center;
-
-  /** border: 1px solid green; /** удалить в конце **/
-}
-
-.half-container {
-  width: 540px;
-  min-height: 200px;
-
-  text-align: left;
-
-  /** border: 1px solid red; /** удалить в конце **/
-}
-
-.heading-container {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.text-container {
-  width: 100%;
-  margin-bottom: 20px;
-
-  /** border: 1px solid blue; /** удалить в конце **/
-}
-
-.overflow-visible {
-  overflow: visible;
+  margin: 100px auto;
 }
 
 /** Заголовки **/
-.heading {
-  width: 100%;
-
+.neucha {
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
 }
 
-h1 {
+.font-size-72 {
   font-size: 72px;
-  text-align: left;
 }
 
-h2 {
+.font-size-64 {
+  font-size: 64px;
+}
+
+.font-size-60 {
   font-size: 60px;
 }
 
-h3 {
+.font-size-52 {
+  font-size: 52px;
+}
+
+.font-size-34 {
   font-size: 34px;
 }
 
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 p {
-  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -158,83 +158,242 @@ p {
   color: #fff;
 }
 
-.color-translucent-white {
-  color: #d7ccc0;
-}
-
-.color-light {
-  color: #f5f4f0;
-}
-
 .color-basic {
   color: #fe8a02;
 }
 
-.color-basic-dark {
-  color: #42413c;
-}
-
-.color-dark {
-  color: #2a2626;
-}
-
-.color-translucent-dark {
+.color-grey {
   color: #908d8b;
+}
+
+.color-grey-light {
+  color: #d7ccc0;
 }
 
 .color-brown {
   color: #b09a81;
 }
 
-.color-blue {
-  color: #1085c5;
-}
-
 /** Шапка **/
+.margin-bottom-185 {
+  margin-bottom: 185px;
+}
 
 .logo {
   position: absolute;
-  top: 55px;
+  top: -55px;
   right: -270px;
-  z-index: -20;
+  z-index: -5;
 
   height: 525px;
 }
 
+.half-container {
+  width: 540px;
+  min-height: 200px;
+
+  text-align: left;
+}
+
 .btn-link {
+  display: block;
   width: 148px;
   margin-top: 40px;
   margin-left: 0;
   padding: 12px 24px;
 
-  background-color: #fe8a02;
+  font-weight: bold;
+
+  background: #fe8a02;
 }
 
-.btn-link a {
-  font-weight: bold;
+.btn-link:hover {
+  background: #ea7600;
+}
+
+.text-decoration-none {
   text-decoration: none;
 }
 
-.margin-185 {
-  margin-bottom: 185px;
-}
+/** Вводная информация **/
 
-/** Когнитивные искажения **/
+.heading-container {
+  width: 100%;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
 
 .video {
   width: 919px;
+
+  margin-bottom: 0;
 
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
 .gag {
-  position: relative;
-  top: -100px;
+  position: absolute;
+  bottom: 0;
   left: 0;
-  z-index: -30;
+  z-index: 0;
 
-  width: 100vw;
-  height: 100px;
+  width: 100%;
+  height: 200px;
+  margin: 0;
 
   background: #42413c;
+}
+
+.margin-bottom-0 {
+  margin-top: 0;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+/** Навигация **/
+
+.third-container-general {
+  max-width: 350px;
+  height: 323px;
+
+  text-align: left;
+}
+
+.heading-third-container {
+  margin-bottom: 20px;
+  padding: 0;
+
+  background: #42413c;
+}
+
+.third-container {
+  padding: 24px;
+
+  background: #f5f4f0;
+}
+
+.num {
+  margin-bottom: 40px;
+
+  line-height: 1;
+}
+
+.third-container:hover {
+  background: #fe8a02;
+}
+
+.third-container:hover .num,
+.third-container:hover h3,
+.third-container:hover p {
+  color: #fff;
+}
+
+/** Когнитивные Статьи **/
+
+.article-pic {
+  vertical-align: middle;
+
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.article-heading {
+  max-width: 502px;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.article-separator {
+  width: 100%;
+  height: 26px;
+
+  margin: 100px 0 20px 0;
+  padding-left: 10px;
+}
+
+.article-separator-light {
+  background: #fff;
+}
+
+.article-separator-dark {
+  background: #b09a81;
+}
+
+/** Футер **/
+
+.padding-55 {
+  padding: 55px;
+}
+
+.form-information {
+  width: 393px;
+  height: 80px;
+}
+
+.feedback {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 18px;
+}
+
+input {
+  float: left;
+  width: 423px;
+  height: 50px;
+  padding: 15px;
+}
+
+.btn-send {
+  position: relative;
+  left: -8px;
+
+  float: left;
+
+  width: 70px;
+  height: 50px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  background: #fe8a02;
+}
+
+.btn-send::before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+
+  width: 70px;
+  height: 50px;
+
+  content: url(../img/send.svg);
+}
+
+.btn-send:hover {
+  background: #ea7600;
+}
+
+.contact-information {
+  margin-top: 60px;
+
+  font-size: 14px;
+}
+
+.contact-information a {
+  color: #1085c5;
 }
