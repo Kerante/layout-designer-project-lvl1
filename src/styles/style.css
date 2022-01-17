@@ -175,7 +175,9 @@ p {
 }
 
 /** Шапка **/
-.margin-bottom-185 {
+.head-cont {
+  height: 258px;
+
   margin-bottom: 185px;
 }
 
@@ -190,7 +192,6 @@ p {
 
 .half-container {
   width: 540px;
-  min-height: 200px;
 
   text-align: left;
 }
@@ -222,6 +223,10 @@ p {
   margin-bottom: 30px;
 
   text-align: center;
+}
+
+.margin-top-27 {
+  margin-top: 27px;
 }
 
 .video {
@@ -329,16 +334,24 @@ p {
 
 /** Футер **/
 
-.padding-55 {
-  padding: 55px;
+.height-190 {
+  height: 190px;
+
+  padding-right: 55px;
+  padding-left: 55px;
 }
 
 .form-information {
   width: 393px;
   height: 80px;
+
+  margin-top: 55px;
+  margin-bottom: 55px;
 }
 
 .feedback {
+  margin-top: 38px;
+
   text-align: left;
 }
 
