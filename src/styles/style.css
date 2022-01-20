@@ -49,14 +49,13 @@
 }
 
 .background-basic {
-  background: none;
+  background: #f5f4f0;
 }
 
-.background-basic::before {
+.background-basic::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -10;
 
   display: block;
   width: 100%;
@@ -194,7 +193,7 @@ h2 {
   height: 258px;
 
   margin-top: 0;
-  margin-bottom: 185px;
+  margin-bottom: 215px;
 }
 
 .logo {
@@ -267,7 +266,7 @@ h2 {
 }
 
 .margin-bottom-0 {
-  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .margin-top-0 {
