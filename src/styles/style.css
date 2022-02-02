@@ -2,21 +2,21 @@
 
 @font-face {
   font-weight: normal;
-  font-family: 'Neucha';
+  font-family: "Neucha";
   font-style: normal;
   src: url(../fonts/Neucha-Regular.ttf);
 }
 
 @font-face {
   font-weight: normal;
-  font-family: 'OpenSans';
+  font-family: "OpenSans";
   font-style: normal;
   src: url(../fonts/static/OpenSans/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-weight: bold;
-  font-family: 'OpenSans';
+  font-family: "OpenSans";
   font-style: bold;
   src: url(../fonts/static/OpenSans/OpenSans-Bold.ttf);
 }
@@ -208,6 +208,9 @@ h2 {
   z-index: -5;
 
   height: 525px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .half-container {
@@ -257,8 +260,9 @@ h2 {
   text-align: center;
 }
 
-.margin-top-27 {
+.video-sign {
   margin-top: 27px;
+  margin-bottom: 30px;
 }
 
 .video {
