@@ -198,7 +198,10 @@ h2 {
   height: 258px;
 
   margin-top: 0;
-  margin-bottom: 215px;
+}
+
+.margin-top-185 {
+  margin-top: 185px;
 }
 
 .logo {
